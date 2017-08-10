@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Train Scheduler</title>
+
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- special google font -->
+		<link href="https://fonts.googleapis.com/css?family=Acme|Pacifico|Permanent+Marker|Kaushan+Script" rel="stylesheet">
+
+		<!-- Custom files -->
+  		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	</head>
+
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="row">
+						<div class="jumbotron">
+							<h1 class="text-center">Train Scheduler</h1>
+							<h2 class="text-center">Anytime is Train Time</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h3 class="panel-title text-center letterpmarker">Add Train</h3>
+							</div>
+							<div class="panel-body">
+								<div class="input-group">
+  									<span class="input-group-addon">Train Name: </span>
+  									<input type="text" class="form-control firstcap" id="ditname">
+								</div>
+								<div class="input-group">
+  									<span class="input-group-addon">Destination: </span>
+  									<input type="text" class="form-control firstcap" id="didest">
+								</div>
+								<div class="input-group">
+  									<span class="input-group-addon">First Train Time: (HH:MM military time) </span>
+  									<input type="text" class="form-control" id="diftrain">
+								</div>
+								<div class="input-group">
+  									<span class="input-group-addon">Frequency: (mins) </span>
+  									<input type="number" class="form-control" id="difrequency">
+  									<span class="input-group-btn">
+        								<button id="dsubmit" class="btn btn-success" type="button">Submit</button>
+      							</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="container-fluid text-center letterpmarker">
+							Copyright &copy; 2017 Hilton DCS
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title text-center letterpmarker">Current Train Schedule</h3>
+						</div>
+						<div class="panel-body">
+
+							<table id="tabletrain" class="table table-striped table-condensed tablelist">
+    							<thead>
+      							<tr>
+        								<th>Train Name</th>
+        								<th>Destination</th>
+        								<th>Frequency (Mins)</th>
+        								<th>Next Arrival</th>
+        								<th>Minutes Away</th>
+      							</tr>
+    							</thead>
+    							<tbody>
+      							<!-- dinamically generated content will populate here -->
+    							</tbody>
+							</table>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call the Javascript code -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- Moment.js minified Javascript code -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+		<!-- Firebase script -->
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<!-- Personal JavaScript -->
+		<script type="text/javascript" src="assets/javascript/train.js"></script>
+
+	</body>
+
+</html>

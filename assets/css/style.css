@@ -1,0 +1,41 @@
+.letterpmarker {
+	font-family: 'Permanent Marker', cursive;
+	text-align: center;
+}
+
+.letterkaushan {
+	font-family: 'Kaushan Script', cursive;
+	text-align: center;
+}
+
+.firstcap {
+	text-transform: capitalize;
+}
+
+.jumbotron {
+	background: url("../../assets/images/train1.jpg") no-repeat;
+	background-size: cover;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    background-color: transparent;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.panel {
+	margin: 20px;
+}
+
+th, td {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+input[type=text] {
+    color: blue;
+}
+
+
+body {
+	background: linear-gradient(LightSeaGreen, white);
+}
